@@ -20,22 +20,3 @@ class App extends StatelessWidget {
     );
   }
 }
-
-/*
-class AppHome extends StatelessWidget {
-  const AppHome({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text(".appable/"),
-        leading: const Icon(Icons.ondemand_video),
-      ),
-      body: Center(
-        child: Text("Home Page"),
-      ),
-    );
-  }
-}
-*/
