@@ -14,7 +14,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 class OnBoardingScreen extends StatelessWidget {
   OnBoardingScreen({super.key});
 
-  final controller = OnBoardingController();
+  final Obcontroller = OnBoardingController();
 
   @override
   Widget build(BuildContext context) {
@@ -23,16 +23,16 @@ class OnBoardingScreen extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           LiquidSwipe(
-            pages: controller.pages,
-            liquidController: controller.controller,
+            pages: Obcontroller.pages,
+            liquidController: Obcontroller.controller,
             slideIconWidget: Icon(Icons.arrow_back_ios),
-            onPageChangeCallback: controller.OnPageChangeCallback,
+            onPageChangeCallback: Obcontroller.OnPageChangeCallback,
             enableSideReveal: true,
           ),
           Positioned(
             bottom: 60.0,
             child: OutlinedButton(
-              onPressed: (() => controller.animateToNextSlide()),
+              onPressed: (() => Obcontroller.animateToNextSlide()),
               style: ElevatedButton.styleFrom(
                   side: const BorderSide(color: Colors.black),
                   shape: const CircleBorder(),
@@ -52,7 +52,7 @@ class OnBoardingScreen extends StatelessWidget {
             top: 50,
             right: 20,
             child: TextButton(
-              onPressed: (() => controller.skip()),
+              onPressed: (() => Obcontroller.skip()),
               child: Text(
                 "Skip",
                 style: TextStyle(color: Colors.grey),
@@ -63,7 +63,7 @@ class OnBoardingScreen extends StatelessWidget {
             () => Positioned(
               bottom: 10,
               child: AnimatedSmoothIndicator(
-                activeIndex: controller.currentPage.value,
+                activeIndex: Obcontroller.currentPage.value,
                 count: 3,
                 effect: const WormEffect(
                   activeDotColor: Color(0xff272727),
