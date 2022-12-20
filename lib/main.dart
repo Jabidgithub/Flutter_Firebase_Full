@@ -1,9 +1,16 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_authentication/firebase_options.dart';
 import 'package:flutter_authentication/src/features/authentication/screens/splash_screens/splash_screen.dart';
+import 'package:flutter_authentication/src/repository/authentication_repository/authentication_repository.dart';
 import 'package:flutter_authentication/src/utils/theme/theme.dart';
 import 'package:get/get.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform)
+      .then((value) => Get.put(AuthenticationRepository()));
+
   runApp(const App());
 }
 
@@ -15,8 +22,11 @@ class App extends StatelessWidget {
     return GetMaterialApp(
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
+      debugShowCheckedModeBanner: false,
+      defaultTransition: Transition.leftToRightWithFade,
+      transitionDuration: const Duration(milliseconds: 500),
       themeMode: ThemeMode.system,
-      home: SplashScreen(),
+      home: const CircularProgressIndicator(),
     );
   }
 }

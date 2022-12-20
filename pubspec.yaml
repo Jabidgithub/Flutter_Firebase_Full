@@ -40,6 +40,9 @@ dependencies:
   get: ^4.6.5
   liquid_swipe: ^3.0.0
   smooth_page_indicator: ^1.0.0+2
+  flutter_otp_text_field: ^1.1.1
+  firebase_core: ^2.4.0
+  firebase_auth: ^4.2.0
   # flutter_native_splash: ^2.2.9
 
 # flutter_native_splash: 
@@ -85,6 +88,11 @@ flutter:
     - assets/images/on_boarding_images/
     - assets/images/on_boarding_images/
     - assets/images/welcome_images/
+    - assets/images/dashboard/
+    - assets/logo/
+    - assets/forget_password/
+
+
 
 
 

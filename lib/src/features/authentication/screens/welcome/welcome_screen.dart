@@ -6,6 +6,8 @@ import 'package:flutter_authentication/src/constants/colors.dart';
 import 'package:flutter_authentication/src/constants/image_strings.dart';
 import 'package:flutter_authentication/src/constants/sizes.dart';
 import 'package:flutter_authentication/src/constants/text_strings.dart';
+import 'package:flutter_authentication/src/features/authentication/screens/login/login_screen.dart';
+import 'package:flutter_authentication/src/features/authentication/screens/singnup/signup_screen.dart';
 import 'package:get/get.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -60,7 +62,7 @@ class WelcomeScreen extends StatelessWidget {
                     children: [
                       Expanded(
                         child: OutlinedButton(
-                          onPressed: () {},
+                          onPressed: () => Get.to(() => LoginScreen()),
                           child: Text(
                             tLogin.toUpperCase(),
                           ),
@@ -71,7 +73,7 @@ class WelcomeScreen extends StatelessWidget {
                       ),
                       Expanded(
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () => Get.to(() => SignUpScreen()),
                           child: Text(
                             tSignup.toUpperCase(),
                           ),
